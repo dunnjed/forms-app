@@ -1,3 +1,43 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row btn-row">
+    <div class="col-3">
+      <!--<div *ngIf="showMultipleOptions" class="form-group">
+        <select [(ngModel)]="currentStep.step" name="power" class="form-control" id="exampleSelect1" (click)="completeThisStepFromSelection()">
+      <option *ngFor="let option of dropDownOptions" [value]="option.step">{{option.step}}</option>
+    </select>
+      </div>-->
+
+      <button [disabled]="disableBtn" *ngIf="!showMultipleOptions" class="btn" (click)="completeThisStepFromBtn()">{{currentStep.step}}</button>
+
+      <div class="btn-group" *ngIf="showMultipleOptions">
+          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Complete...
+          </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" href="#" *ngFor="let option of dropDownOptions" (click)="completeThisStepFromSelection(option.step)">{{option.step}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row table-row">
+    <div class="col">
+      1 of 2
+    </div>
+    <div class="col">
+      1 of 2
+    </div>
+  </div>
+  <div class="row table-row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+  </div>
+</div>

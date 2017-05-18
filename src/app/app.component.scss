@@ -1,0 +1,24 @@
+.container {
+    margin-top: 30px;
+}
+
+.table-row {
+    background-color: lighten(lightgray, 10%);
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box;
+    height: 50px;
+
+    &:last-child {
+        border-bottom: 1px solid black;
+    }
+}
+
+.btn-row {
+    margin-bottom: 1rem;
+}
+
+.btn, .btn-group, .dropdown-menu {
+    width: 200px;
+}
